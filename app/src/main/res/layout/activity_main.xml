@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_threads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Threads"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_coroutines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coroutines"
+        app:layout_constraintLeft_toRightOf="@+id/btn_threads"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_launch_await"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Await"
+        app:layout_constraintLeft_toRightOf="@+id/btn_coroutines"
+        app:layout_constraintTop_toBottomOf="@+id/btn_threads"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_launch_concur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Concurrent"
+        app:layout_constraintLeft_toRightOf="@+id/btn_launch_await"
+        app:layout_constraintTop_toBottomOf="@+id/btn_coroutines" />
+
+    <Button
+        android:id="@+id/btn_runbloacking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Run blocking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_launch_await" />
+
+    <Button
+        android:id="@+id/btn_non_bloacking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non blocking"
+        app:layout_constraintStart_toEndOf="@id/btn_runbloacking"
+        app:layout_constraintTop_toBottomOf="@+id/btn_launch_await" />
+
+    <TextView
+        android:id="@+id/result_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_runbloacking"
+        tools:text="result "/>
+
+</android.support.constraint.ConstraintLayout>
